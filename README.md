@@ -2,7 +2,8 @@
 
 <br>
 
-https://github.com/Harisene/react-native-bottom-sheet-hook/assets/33250282/5e1288e0-6421-4e1e-8f5c-fdc2fe2628f6
+![Screen Recording 2024-05-16 at 4 21 16 PM](https://github.com/Harisene/react-native-bottom-sheet-hook/assets/33250282/c07bbd27-cd82-4f17-8faa-57e2ac7067a9)
+
 
 <br>
 <br>
