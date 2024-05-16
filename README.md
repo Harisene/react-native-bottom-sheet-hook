@@ -97,7 +97,6 @@ export default function HomeScreen() {
           React Native Bottom Sheet Hook
         </Text>
         <Text style={{marginTop: 40, fontSize: 16}}>Use the "useBottomSheet" hook to control me</Text>
-
         <Button title="Close" color='red' onPress={hide} />
       </View>
     );
