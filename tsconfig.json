@@ -11,5 +11,5 @@
     "declaration": true,
     "declarationDir": "./types"
   },
-  "include": ["src"]
+  "include": ["index.ts"],
 }
