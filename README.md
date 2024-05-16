@@ -1,5 +1,12 @@
 # react-native-bottom-sheet-hook #
 
+<br>
+
+https://github.com/Harisene/react-native-bottom-sheet-hook/assets/33250282/5e1288e0-6421-4e1e-8f5c-fdc2fe2628f6
+
+<br>
+<br>
+
 Features of this package,
 
 - you can use ```useBottomSheet``` hook to control the bottom sheet from any component.
