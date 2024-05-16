@@ -1,0 +1,27 @@
+{
+  "name": "react-native-simple-bottom-sheet",
+  "version": "1.0.0",
+  "description": "This is a simple bottom sheet component for react native",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel ./src -d ./lib"
+  },
+  "author": "Haritha Senevirathne",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Harisene/react-native-customizable-countdown"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-flow": "^7.24.1",
+    "@babel/preset-react": "^7.24.1",
+    "@types/react": "^18.2.45",
+    "react": "^18.2.0",
+    "react-native": "^0.73.6",
+    "react-native-gesture-handler": "^2.16.2",
+    "react-native-reanimated": "^3.11.0"
+  }
+}
