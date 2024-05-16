@@ -82,37 +82,36 @@ import the ```useBottomSheet``` and use ```show``` and ```hide``` functions.
 You need to pass the component to show in the bottom sheet as the argument to ```show``` function.
 
 ```
-import { useBottomSheet } from 'react-native-bottom-sheet-hook';
+import React from "react";
+import { View, StyleSheet, Button, Text } from "react-native";
+import { useBottomSheet } from "react-native-bottom-sheet-hook";
 
-export default function Home() {
-
+export default function HomeScreen() {
   const { show, hide } = useBottomSheet();
-  
+
   const renderBottomSheetComponent = () => {
     return (
-      <View style={{ height: 200, width: "100%" }}>
-        <Text>Hello world</Text>
+      <View style={{ alignItems: "center" }}>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Welcome to</Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold", marginTop: 20 }}>
+          React Native Bottom Sheet Hook
+        </Text>
+        <Text style={{marginTop: 40, fontSize: 16}}>Use the "useBottomSheet" hook to control me</Text>
+
+        <Button title="Close" color='red' onPress={hide} />
       </View>
     );
-  }
-  
+  };
+
   const handlePress = () => {
-    show(renderBottomSheetComponent());
-  }
-  
+    show(renderBottomSheetComponent(), { height: 300 });
+  };
+
   return (
     <View style={styles.container}>
-      <Button
-        title="Show bottom sheet"
-        onPress={handlePress}
-      />
-      <Button
-        title="Hide bottom sheet"
-        onPress={hide}
-      />
+      <Button title="Show bottom sheet" onPress={handlePress} />
     </View>
   );
-
 }
 
 
