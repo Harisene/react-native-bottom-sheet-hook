@@ -129,4 +129,34 @@ export default function HomeScreen() {
 
 ```
 
+## Props ##
+
+### BottomSheetProvider Props ###
+
+Prop name | type | required | description | default value
+--- | --- | --- | --- | ---
+hideHandle | boolean | N | Hide the handle of the bottom sheet | false
+hideBackground | boolean | N | Hide the background of the bottom sheet | false
+backgroundColor | string | N | Change the background color of the bottom sheet | '#303133'
+containerStyle | StyleProp<ViewStyle> | N | Change the container style of the bottom sheet | undefined
+height | number | N | Height of the bottom sheet | DEVICE_HEIGHT * 0.4
+
+### show method arguments ###
+
+Argument name | type | required | description | default value
+--- | --- | --- | --- | ---
+component | ReactElement | Y | Component to render inside the ```BottomSheet```
+config | Configurations in [Section `Configurations`](##configurations) | N | Set configurations for the BottomSheet component. Additionally, if you have set global configurations through ```BottomSheetProvider``` props, you can override them here  | false
+
+### Configurations ###
+
+Prop name | type | required | description | default value
+--- | --- | --- | --- | ---
+hideHandle | boolean | N | Hide the handle of the bottom sheet | false
+hideBackground | boolean | N | Hide the background of the bottom sheet | false
+backgroundColor | string | N | Change the background color of the bottom sheet | '#303133'
+containerStyle | StyleProp<ViewStyle> | N | Change the container style of the bottom sheet | undefined
+height | number | N | Height of the bottom sheet | DEVICE_HEIGHT * 0.4
+
+
 
