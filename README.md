@@ -146,7 +146,7 @@ height | number | N | Height of the bottom sheet | DEVICE_HEIGHT * 0.4
 Argument name | type | required | description | default value
 --- | --- | --- | --- | ---
 component | ReactElement | Y | Component to render inside the ```BottomSheet```
-config | [Section `Configurations`](###Configurations) | N | Set configurations for the BottomSheet component. Additionally, if you have set global configurations through ```BottomSheetProvider``` props, you can override them here  | false
+config | Configurations | N | Set configurations for the BottomSheet component. Additionally, if you have set global configurations through ```BottomSheetProvider``` props, you can override them here  | false
 
 ### Configurations ###
 
