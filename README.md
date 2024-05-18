@@ -18,6 +18,8 @@
 
 :sparkle: All the animations are running on the main thread.
 
+:sparkle: Customize the ```BottomSheet``` component the way you want. Pass ```props``` "globally" or override global ```props``` "locally".
+
 ## Installation Guide ##
 
 install the package by running the below command
