@@ -4,7 +4,6 @@
 
 ![Screen Recording 2024-05-16 at 4 21 16 PM](https://github.com/Harisene/react-native-bottom-sheet-hook/assets/33250282/c07bbd27-cd82-4f17-8faa-57e2ac7067a9)
 
-
 <br>
 <br>
 
@@ -19,6 +18,13 @@
 :sparkle: All the animations are running on the main thread.
 
 :sparkle: Customize the ```BottomSheet``` component the way you want. Pass ```props``` "globally" or override global ```props``` "locally".
+
+<br>
+
+## Hey! Would you like to contribute to this package?! :raised_hands: :handshake:
+Go ahead, fork the repo, and create many pull requests. :smile: :smile:
+
+<br>
 
 ## Installation Guide ##
 
