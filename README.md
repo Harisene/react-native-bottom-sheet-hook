@@ -8,12 +8,15 @@
 <br>
 <br>
 
-Features of this package,
+## Features of this package :star_struck: :star_struck:
 
-- you can use ```useBottomSheet``` hook to control the bottom sheet from any component.
-- ```BottomSheetProvider``` higher order component helps to maintain clean code.
-- This package uses ```react-native-reanimated``` and ```react-native-gesture-handler``` for best performance.
-- All the animations are running on the main thread.
+:sparkle: You can use ```useBottomSheet``` hook to control the bottom sheet from any component.
+
+:sparkle: ```BottomSheetProvider``` higher order component helps to maintain clean code.
+
+:sparkle: This package uses ```react-native-reanimated``` and ```react-native-gesture-handler``` for best performance.
+
+:sparkle: All the animations are running on the main thread.
 
 ## Installation Guide ##
 
