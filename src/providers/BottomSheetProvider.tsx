@@ -1,51 +1,33 @@
-import BottomSheet from '../components/BottomSheet';
-import React, {
-  ReactElement,
-  ReactNode,
-  createContext,
-  useContext,
-  useState,
-} from 'react';
+import BottomSheet from "../components/BottomSheet";
+import React, { ReactNode, createContext, useContext, useState } from "react";
+import {
+  BottomSheetContextProps,
+  BottomSheetProviderProps,
+  Configurations,
+} from "../types/types";
 
 const initialState = {
   show: () => {},
   hide: () => {},
 };
 
-type Config = {
-  /**
-   * Height of the bottom sheet.
-   */
-  height?: number;
-};
+const BottomSheetContext = createContext<BottomSheetContextProps>(initialState);
 
-type BottomSheetContextType = {
-  /**
-   * Call this function to show the bottom sheet.
-   * Don't forget to pass your ```component``` as argument to show in the bottom sheet.
-   *
-   * If you are passing a ```FlatList``` or ```ScrollView``` to the bottom sheet, make sure to import them from ```react-native-gesture-handler```.
-   */
-  show: (component: React.ReactNode, config?: Config) => void;
-
-  /**
-   * Call this function to hide the bottom sheet.
-   */
-  hide: () => void;
-};
-
-const BottomSheetContext = createContext<BottomSheetContextType>(initialState);
-
-interface Props {
-  children: ReactElement;
-}
-
-const BottomSheetProvider: React.FC<Props> = ({children}) => {
+const BottomSheetProvider: React.FC<BottomSheetProviderProps> = ({
+  children,
+  backgroundColor,
+  containerStyle,
+  height,
+  hideBackground,
+  hideHandle,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [component, setComponent] = useState<ReactNode>(null);
-  const [configurations, setConfigurations] = useState<Config | null>(null);
+  const [configurations, setConfigurations] = useState<Configurations | null>(
+    null
+  );
 
-  const show = (comp: ReactNode, config?: Config) => {
+  const show = (comp: ReactNode, config?: Configurations) => {
     if (component) {
       return;
     }
@@ -65,13 +47,26 @@ const BottomSheetProvider: React.FC<Props> = ({children}) => {
   };
 
   return (
-    <BottomSheetContext.Provider value={{show, hide}}>
+    <BottomSheetContext.Provider value={{ show, hide }}>
       {children}
       {component && (
         <BottomSheet
           onHide={reset}
           height={configurations?.height}
-          isVisible={isVisible}>
+          isVisible={isVisible}
+          hideHandle={
+            configurations?.hideHandle !== undefined
+              ? configurations.hideHandle
+              : hideHandle
+          }
+          hideBackground={
+            configurations?.hideBackground !== undefined
+              ? configurations.hideBackground
+              : hideBackground
+          }
+          backgroundColor={configurations?.backgroundColor ?? backgroundColor}
+          containerStyle={configurations?.containerStyle ?? containerStyle}
+        >
           {component}
         </BottomSheet>
       )}
