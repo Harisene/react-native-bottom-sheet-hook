@@ -75,27 +75,27 @@ const BottomSheet = ({
     []
   );
 
-  const rBackground = useAnimatedStyle(
-    () => ({
+  const rBackground = useAnimatedStyle(() => {
+    if (hideBackground) {
+      return { opacity: 0 };
+    }
+    return {
       opacity: interpolate(
         translationY.value,
         [-BOTTOM_SHEET_HEIGHT, 0],
         [0.5, 0],
         Extrapolation.CLAMP
       ),
-    }),
-    [BOTTOM_SHEET_HEIGHT]
-  );
+    };
+  }, [BOTTOM_SHEET_HEIGHT, hideBackground]);
 
   return (
     <>
-      {!hideBackground && (
-        <AnimatedPressable
-          pointerEvents={isVisible ? "auto" : "none"}
-          style={[styles.background, rBackground]}
-          onPress={hideBottomSheet}
-        />
-      )}
+      <AnimatedPressable
+        pointerEvents={isVisible ? "auto" : "none"}
+        style={[styles.background, rBackground]}
+        onPress={hideBottomSheet}
+      />
       <GestureDetector gesture={gesture}>
         <Animated.View style={[styles.container, rBottomSheet, containerStyle]}>
           {!hideHandle && <View style={styles.handler} />}
