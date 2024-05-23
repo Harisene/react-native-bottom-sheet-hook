@@ -74,5 +74,5 @@ const BottomSheetProvider: React.FC<BottomSheetProviderProps> = ({
   );
 };
 
-export default BottomSheetProvider;
+export { BottomSheetProvider };
 export const useBottomSheet = () => useContext(BottomSheetContext);

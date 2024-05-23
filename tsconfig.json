@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2016",
     "module": "commonjs",
     "strict": true,
-    "jsx": "react",
+    "jsx": "react", // Use "react" for React or "react-native" for React Native
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./lib",
-    "declaration": true,
-    "declarationDir": "./types"
   },
-  "include": ["index.ts"],
 }
